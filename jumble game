@@ -1,0 +1,26 @@
+#Daniel Chen 10/19
+#This program jumbles the letters of a word chosen from an already set list of words
+#Then it asks the user to guess using a while loop with an always true condition to
+#continue running until the user guesses correctly
+
+import random
+
+words = ("alpha" , "omega" , "beta" , "gamma")
+word = random.choice(words)
+correct = word
+new = ""
+while(0<1):
+    for i in range(len(word)):
+        index = random.randint(0,len(word)-1)
+        new += word[index]
+        word = word.replace(word[index],"",1)
+    print(new)
+    guess = input("What is the word? ")
+    if guess == correct:
+        print("That's finally correct")
+        break
+    else:
+        print("Completely wrong, do it again")
+  
+
+
